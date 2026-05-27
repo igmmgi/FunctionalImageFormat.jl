@@ -1,0 +1,19 @@
+# Julia
+Manifest.toml
+
+# Test outputs
+test/test_out.fif
+test/test_raw_out.fif
+test/test_ave_out.fif
+test/mne_raw_data.bin
+test/mne_ave_data.bin
+
+# Benchmark scratch files
+test/bench_*.jl
+test/bench_*.py
+test/benchmark.jl
+
+# Editor
+*.swp
+*~
+.vscode/
