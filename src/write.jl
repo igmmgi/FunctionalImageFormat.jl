@@ -69,7 +69,6 @@ function write_proj(io::IO, dir::Vector{FifTag}, projs::Vector{FifProj})
     for proj in projs
         write_block_start(io, dir, FIFFB_PROJ_ITEM)
 
-        write_int_tag(io, dir, FIFF_NAME, Int32(0)) # MNE sometimes puts an ID struct, but we just need the tags
         write_string_tag(io, dir, FIFF_NAME, proj.name)
         write_int_tag(io, dir, FIFF_PROJ_ITEM_KIND, proj.kind)
         write_int_tag(io, dir, FIFF_MNE_PROJ_ITEM_ACTIVE, Int32(proj.active ? 1 : 0))

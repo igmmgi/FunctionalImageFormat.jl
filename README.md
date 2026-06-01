@@ -1,5 +1,8 @@
 # FunctionalImageFormat.jl
 
+[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://igmmgi.github.io/FunctionalImageFormat.jl/)
+[![CI](https://github.com/igmmgi/FunctionalImageFormat.jl/workflows/Tests/badge.svg)](https://github.com/igmmgi/FunctionalImageFormat.jl/actions)
+
 A native Julia package for reading and writing [FIFF (Functional Image File Format)](https://mne.tools/stable/auto_tutorials/io/plot_20_reading_eeg_data.html) files used in MEG/EEG neuroimaging.
 
 ## Installation

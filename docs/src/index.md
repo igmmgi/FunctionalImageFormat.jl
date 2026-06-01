@@ -48,11 +48,8 @@ evoked.data       # Array{Float32,3} [channels × time × conditions]
 
 ## Performance
 
-Benchmarked on sample data (376 channels × 14,400 samples):
-
-| Library | Time |
-|---------|------|
-| **FunctionalImageFormat.jl** | **~10 ms** |
+Optimized for fast I/O with in-place byte-swapping and minimal allocations.
+Benchmarks on sample data (376 channels × 14,400 samples) show read times of ~10 ms.
 
 ## License
 

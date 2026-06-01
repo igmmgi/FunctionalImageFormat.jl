@@ -110,4 +110,18 @@ using FunctionalImageFormat
         @test_throws ErrorException channel_index(labels, [0, 1])
         @test_throws ErrorException channel_index(labels, 5)
     end
+
+    @testset "Error Paths" begin
+        # Non-existent file
+        @test_throws ErrorException read_fif("does_not_exist.fif")
+
+        # Corrupt file (write invalid magic bytes)
+        mktempdir() do tmp
+            corrupt_file = joinpath(tmp, "corrupt.fif")
+            open(corrupt_file, "w") do io
+                write(io, "NOT_A_FIF_FILE_HEADER_BYTES")
+            end
+            @test_throws ErrorException read_fif(corrupt_file, verbose=false)
+        end
+    end
 end

@@ -96,7 +96,7 @@ function read_dir_tree(io::IO)
     seekstart(io)
     first_tag = read_tag(io)
     if first_tag.kind != FIFF_FILE_ID
-        error("Invalid FIF file: Missing FIFF_FILE_ID at start.")
+        error("Invalid FIF file: Missing FIFF_FILE_ID at file start.")
     end
 
     # Look for FIFF_DIR_POINTER right after FILE_ID payload
