@@ -2,12 +2,6 @@
 
 A native Julia package for reading and writing [FIFF (Functional Image File Format)](https://mne.tools/stable/auto_tutorials/io/plot_20_reading_eeg_data.html) files used in MEG/EEG neuroimaging.
 
-## Features
-
-- **Zero-dependency I/O** — Read and write `.fif` files entirely in native Julia
-- **Fast and Efficient** — Optimized block reads with in-place byte-swap
-- **Bit-perfect round-trips** — `read_fif → write_fif → read_fif` produces identical data
-- **Standard Compliant** — Output files adhere strictly to the format structure and are fully inter-operable with the wider neuroimaging ecosystem
 
 ## Installation
 
